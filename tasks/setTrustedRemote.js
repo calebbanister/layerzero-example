@@ -3,19 +3,10 @@ const { getDeploymentAddresses } = require("../utils/readStatic")
 const OFT_CONFIG = require("../constants/oftConfig.json")
 
 module.exports = async function (taskArgs, hre) {
-    let srcContractName = "ExampleOFT"
+    let srcContractName = taskArgs.srcContract
     let dstContractName = srcContractName
-    if (taskArgs.targetNetwork === OFT_CONFIG.baseChain) {
-        // if its the base chain, we need to grab a different contract
-        // Note: its reversed though!
-        dstContractName = "ExampleBasedOFT"
-    }
-    if (hre.network.name === OFT_CONFIG.baseChain) {
-        srcContractName = "ExampleBasedOFT"
-    }
 
     const dstChainId = CHAIN_ID[taskArgs.targetNetwork]
-    // console.log(getDeploymentAddresses(taskArgs.targetNetwork))
     const dstAddr = getDeploymentAddresses(taskArgs.targetNetwork)[dstContractName]
     // get local contract instance
     const contractInstance = await ethers.getContract(srcContractName)

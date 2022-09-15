@@ -2,13 +2,8 @@ const CHAIN_ID = require("../constants/chainIds.json")
 const environments = require("../constants/environments.json")
 
 function TrustedRemoteTestnet() {
-    this.rinkeby
-    this.bscTestnet
+    this.intainTestnet
     this.fuji
-    this.mumbai
-    this.arbitrumRinkeby
-    this.optimismKovan
-    this.fantomTestnet
 }
 
 function TrustedRemote() {

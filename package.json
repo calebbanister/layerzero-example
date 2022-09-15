@@ -1,6 +1,6 @@
 {
-  "name": "@layerzerolabs/solidity-examples",
-  "version": "0.0.2",
+  "name": "layerzero-example",
+  "version": "0.0.1",
   "license": "MIT",
   "files": [
     "artifacts/",
@@ -15,10 +15,6 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.4.1",
-    "@uniswap/v2-core": "^1.0.1",
-    "@uniswap/v2-periphery": "^1.1.0-beta.0",
-    "@openzeppelin/contracts-upgradeable": "^4.6.0",
-    "@openzeppelin/hardhat-upgrades": "^1.18.3",
     "dotenv": "^10.0.0",
     "hardhat": "^2.8.0",
     "hardhat-contract-sizer": "^2.1.1",
@@ -29,8 +25,6 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.1",
-    "@layerzerolabs/prettier-plugin-solidity": "^1.0.0-beta.19",
-    "@nomiclabs/hardhat-etherscan": "3.0.3",
     "prettier": "^2.4.1",
     "solhint": "^3.3.6",
     "@nomiclabs/hardhat-ethers": "^2.0.3",
