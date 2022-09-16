@@ -28,7 +28,6 @@ contract IMExample is NonblockingLzApp {
 
     // this method is called automatically called with the bytes payload sent from the source
     function _nonblockingLzReceive(uint16, bytes memory, uint64, bytes memory _payload) internal override {
-//        (address investor,address issuer, address token, uint256 amount, bytes32 txHash, bool status) = abi.decode(_payload, (address, address, uint256));
         IMPacket memory p = abi.decode(_payload, (IMPacket));
 
         // transfer the tokens from the issuer to the investor
