@@ -28,7 +28,7 @@ npx hardhat deployWireCheck --e testnet --contract IMExample
 
 ### issuer must approve the IM contract!
 ```
-npx hardhat --network fuji approve
+npx hardhat --network intain-testnet approve
 ```
 
 ### send a message
