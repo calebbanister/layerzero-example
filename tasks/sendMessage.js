@@ -1,5 +1,4 @@
 const CHAIN_ID = require("../constants/chainIds.json");
-const { getDeploymentAddresses } = require("../utils/readStatic");
 
 module.exports = async function (taskArgs, hre) {
     const dstChainId = CHAIN_ID[taskArgs.targetNetwork]
@@ -7,21 +6,16 @@ module.exports = async function (taskArgs, hre) {
     console.log(`local contract: ${contractInstance.address}`)
     const mockToken = await ethers.getContract("MockToken")
 
-    console.log(`approve() the contract to transferFrom the sender's stablecoin`);
-    let tx = await (
-        await mockToken.approve(
-           contractInstance.address,
-           taskArgs.qty
-        )
-    ).wait()
-    console.log(`approve() tx: ${tx.transactionHash}`)
-
     console.log(`sendMessage()`);
     tx = await (
         await contractInstance.sendMessage(
             dstChainId,
+            taskArgs.investor,
             taskArgs.issuer,
-            taskArgs.qty,
+            taskArgs.token,
+            taskArgs.amount,
+            taskArgs.tx,
+            taskArgs.status,
             { value: ethers.utils.parseEther("1") }
         )
     ).wait()

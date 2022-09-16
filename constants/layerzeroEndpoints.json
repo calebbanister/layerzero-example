@@ -14,5 +14,6 @@
   "arbitrum-goerli": "",
   "optimism-goerli": "",
   "fantom-testnet": "0x7dcAD72640F835B0FA36EFD3D6d3ec902C7E5acf",
-  "intain-testnet": "0x4e08B1F1AC79898569CfB999FB92B5495FB18A2B"
+  "intain-testnet": "0x4e08B1F1AC79898569CfB999FB92B5495FB18A2B",
+  "celo-testnet": "0xae92d5aD7583AD66E49A0c67BAd18F6ba52dDDc1"
 }

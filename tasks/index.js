@@ -27,5 +27,12 @@ task("getSigners", "show the signers of the current mnemonic", require("./getSig
 
 task("sendMessage", "", require("./sendMessage"))
     .addParam("targetNetwork", "the target chain name: ie: fuji, intain-testnet")
-    .addParam("issuer", "the address of the issuer")
-    .addParam("qty", "the stablecoin quantity")
+    .addParam("investor", "the address of the investor on destination")
+    .addParam("issuer", "the address of the issuer on destination")
+    .addParam("token", "the token address on destination")
+    .addParam("amount", "the amount of tokens to transfer from issuer to investor")
+    .addParam("tx", "the transactionHash on source chain of investor transferring issuer stablecoin")
+    .addOptionalParam("status", "true | false", true, types.boolean)
+
+
+task("approve", "approve the IMExample contract to spend your MockTokens", require("./approve"))

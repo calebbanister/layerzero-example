@@ -17,6 +17,7 @@ module.exports = async function ({ deployments, getNamedAccounts }) {
         log: true,
         waitConfirmations: 1,
     })
+    
 }
 
 module.exports.tags = ["IMExample"]

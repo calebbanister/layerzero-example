@@ -14,5 +14,6 @@
   "arbitrum-rinkeby": 10010,
   "optimism-kovan":   10011,
   "fantom-testnet":   10012,
+  "celo-testnet":     10025,
   "intain-testnet":   10042
 }

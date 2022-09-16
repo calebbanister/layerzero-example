@@ -149,6 +149,11 @@ module.exports = {
       url: `http://165.227.5.156:9650/ext/bc/vur6P5LhdzYH9jgvMLsrca5ntVSwN2zWzDWD3Mmn9w7pixbQG/rpc`,
       chainId: 52322,
       accounts: accounts(),
+    },
+    'celo-testnet': {
+      url: `https://alfajores-forno.celo-testnet.org`,
+      chainId: 44787,
+      accounts: accounts(),
     }
   },
 
